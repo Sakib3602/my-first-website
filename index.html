@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+   <style>
+        body{
+       
+            font-family:  sans-serif;
+        }
+        .button1{
+            background-color: #6C2BD9;
+            color: white;
+
+        }
+        .b1:hover{
+            background-color: #581dbf;
+        }
+        .nav-link:hover{
+            color: #6C2BD9;
+
+        }
+        .button2{
+            height: 35px;
+            color: black;
+            background-color: rgb(223, 227, 230);
+            border: 1px solid rgb(202, 201, 198);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+        }
+        .button3{
+            height: 35px;
+            color: black;
+            width: 40px;
+            border: 1px solid rgb(202, 201, 198);
+            border-left: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .b2:hover{
+            color: #581dbf;
+        }
+        .b3:hover{
+            background-color: rgb(244, 249, 254);
+        }
+        .z{
+            margin-right: 20px;
+            color: black;
+        }
+        .m{
+            margin-top: 150px;
+        }
+        .f{
+            font-weight: 900;
+            
+        }
+        .btnn{
+            width: 200px;
+            height: 50px;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(194, 189, 189);
+            border-radius: 10px;
+        }
+        .git:hover{
+            background-color: rgb(248, 249, 250);
+
+        }
+        .goo{
+            color: rgb(109, 112, 114);
+        }
+        .goo1:hover{
+            color: black;
+        }
+        .l1{
+            background-color: rgb(253, 250, 250);
+            padding-bottom: 100px;
+        }
+        .nv{
+            background-color: rgba(255, 255, 254, 0.9); /* Adjust alpha for transparency */
+            backdrop-filter: blur(5px);
+             height: 80px;
+            border-radius: 50px;
+        }
+        .line{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgb(215, 211, 211);
+            margin-bottom: 60px;
+        }
+        .kl{
+            padding-top: 30px;
+            color: #8a8a90;
+        }
+        .kll{
+            color: #8a8a90;
+            padding-top: 5px;
+        }
+        .pk{
+            position: relative;
+        }
+        .pk::after{
+            content: "";
+            position: absolute;
+            background-color: #6C2BD9;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            bottom: 0;
+            transition: 0.2s;
+    
+        }
+        .pk:hover::after{
+            width: 100%;
+        }
+        .io{
+            font-size: 50px;
+            margin-bottom: 50px;
+            margin-top: 120px;
+            color: #8a8a90;
+        }
+        .n{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .t{
+            font-weight: bold;
+
+            border-right: 2px solid rgb(167, 162, 152);
+            width: 200px;
+        }
+        .iio{
+            margin-left: 30px;
+        }
+        .starter{
+            background-color: white;
+            border: 0px solid rgb(215, 213, 213);
+            border-radius: 20px;
+        }
+        /* .dld{
+            position: relative;
+        }
+        .dld:hover::after{
+            height: 100%;
+            width: 100%;
+            
+            
+        }
+        .dld::after{
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: #581dbf;
+            opacity: .2;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            transition: 0.4s;
+            color: white;
+            border-radius: 18px;
+
+        }
+         */
+         .ba{
+            font-size: 50px;
+            color: #581dbf;
+         }
+         
+         
+         .end{
+            
+            width: 100%;
+            /* margin-bottom: 10px; */
+            border-bottom: 2px solid rgb(221, 220, 219);
+
+            
+         }
+         
+    </style>
+
+</head>
+<body>
+    <div class="container ">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  fixed-top ">
+        <div class="container nv">
+          <a class="navbar-brand fw-1 fs-4 me-auto qi" href="#"><img class="p" src="https://demo.themesberg.com/landwind/images/logo.svg" alt=""> Land Wind</a>
+          
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pl-5">
+              <ul class="navbar-nav justify-content-center align-item-center  flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active fs-6 fw-bolder z  pk qi" style="color: #6C2BD9" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-medium z pk qi" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link fw-medium z pk qi" href="#">Market</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-medium z pk qi" href="#">Selers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-medium z pk qi" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-medium z pk qi" href="#">Contact</a>
+                  </li>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            
+            </div>
+          </div>
+          <button class=" button2 b3 qi"><i class="fa-regular fa-star"></i>Star</button>
+          <button class="button3 b2 me-3 qi">OK</button>
+
+          <button class="btn button1 b1 gap-2 qi">Download</button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+
+    <!-- navbar -->
+    <div class="row m">
+        <div class="col-7">
+            <h1 class="text-dark f pt-5 qii">Building digital</h1>
+            <h1 class="text-dark f qii">products & brands.</h1>
+            <div class="row">
+                <div class="col-10">
+                    <h5 class="fw-lighter text-dark pt-4 qiiii">This free and open-source landing page template was built using the utility classes from Tailwind CSS and based on the components from the Flowbite Library and the Blocks System.</h5>
+
+                </div>
+            </div>
+        <button class="btnn fw-normal git mt-5 qo"><i class="fa-brands fa-github me-2"></i>View On Github</button>
+        <button class="btnn fw-normal git mt-5 qo"><i class="fa-brands fa-figma me-2"></i>Get Figma File</button>
+        </div>
+        <div class="col-5">
+            <img class="img-fluid qiii" src="https://demo.themesberg.com/landwind/images/hero.png" alt="">
+        </div>
+    </div>
+    <!-- aksanhdksh -->
+    <div class="row mt-4 mb-4">
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"><i class="fa-brands fa-airbnb me-2 "></i>airbnb</div>
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"> <i class="fa-brands fa-google me-2 "></i>Google</div>
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"><i class="fa-brands fa-microsoft me-2 "></i>Microsoft</div>
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"><i class="fa-brands fa-spotify me-2 "></i>Spotify</div>
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"><i class="fa-solid fa-spa me-2 "></i>Mashable</div>
+        <div class="col-2 fw-bold fs-2 text-center goo goo1"><i class="fa-brands fa-mailchimp me-2"></i>Mailchim</div>
+    </div>
+    </div>
+        <!--new start container  -->
+        <div class="container-fluid l1 ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-6" style="margin-top: 6rem;">
+                    <h1 class="fw-bold">Work with tools you already use</h1>
+                   
+                    <h5 class="kl pt-3 ">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</h5>
+                    
+                    <div class="line"></div>
+                    <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Continuous integration and deployment</h6>
+                    <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Development workflow</h6>
+                    <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+                    <h5 class="kl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</h5>
+                    </div>
+                    <div class="col-6" style="margin-top: 6rem;">
+                        <img class="img-fluid big" src="https://demo.themesberg.com/landwind/images/feature-1.png" alt="">
+                    </div>
+                    
+                </div>
+
+
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <img class="img-fluid mt-5 big1" src="https://demo.themesberg.com/landwind/images/feature-2.png" alt="">
+                    </div>
+                    <div class="col-6">
+                        <h1 class="fw-bold mt-5">Work with tools you already use</h1>
+                        <h5 class=" pt-3 kl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</h5>
+
+                        <div class="line"></div>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Continuous integration and deployment</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Development workflow</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Limitless business automation</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+
+                        <h5 class="kl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</h5>
+
+                        
+
+
+
+                    </div>
+
+
+                </div>
+        </div>
+        </div>
+
+        <!-- newwwwww -->
+        <div class="container">
+            <div class="row align-item-center justify-content-center">
+                <div class="col-8 text-center">
+                    <i class="fa-solid fa-user io"></i>
+                    <h3 class="mt-3 mb-5">"Landwind is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</h3>
+                 
+                    <div class="d-flex justify-content-center align-item-center mb-5">
+                        <div class="t"><img class="img-fluid n" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="">Arun Vhatiya</div>
+                        <div class="iio">CEO of Google</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- another new card here -->
+        <div class="container-fluid l1">
+            <div class="container">
+
+                <div class="row justify-content-center align-item-center"> 
+                    <div class="col-8">
+                        <h1 class="mt-5 text-center">Designed for business teams like yours</h1>
+                        <h5 class="kl mt-3 text-center">Here at Landwind we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</h5>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-between mt-5">
+                    <!-- 
+
+
+                     -->
+                <div class="col-3 starter shadow dld">
+                    <h3 class="text-center fw-bold mt-4">Starter</h3>
+                    <h5 class="kl mb-4 text-center">Best option for personal use & for your next project.</h5>
+                    <h1 class="fw-bolder mt-5 mb-5 text-center">$29</h1>
+
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Continuous integration</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Development workflow</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Limitless business automation</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+                        <h6 class="text-lighter fw-semibold mb-4"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+
+                        <div class="d-grid gap-2">
+                            <button id="addToCartBtn" class="btn btn-outline-primary" type="button">Add to cart</button>
+                            <button id="buyNowBtn" class="btn btn-outline-danger mb-4" type="button">Buy Now</button>
+
+                          </div>
+
+
+                </div>
+
+                <div class="col-3 starter shadow dld">
+                    <h3 class="text-center fw-bold mt-4">Starter</h3>
+                    <h5 class="kl mb-4 text-center">Best option for personal use & for your next project.</h5>
+                    <h1 class="fw-bolder mt-5 mb-5 text-center">$29</h1>
+
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Continuous integration</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Development workflow</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Limitless business automation</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+                        <h6 class="text-lighter fw-semibold mb-4"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary" type="button">Add to cart</button>
+                            <button class="btn btn-outline-danger mb-4" type="button">Buy Now</button>
+
+                          </div>
+
+
+                </div>
+
+                <div class="col-3 starter shadow dld">
+                    <h3 class="text-center fw-bold mt-4">Starter</h3>
+                    <h5 class="kl mb-4 text-center">Best option for personal use & for your next project.</h5>
+                    <h1 class="fw-bolder mt-5 mb-5 text-center">$29</h1>
+
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Continuous integration</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Development workflow</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Limitless business automation</h6>
+                        <h6 class="text-lighter fw-semibold"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+                        <h6 class="text-lighter fw-semibold mb-4"><i class="fa-solid fa-check me-3"></i>Knowledge management</h6>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary" type="button">Add to cart</button>
+                            <button class="btn btn-outline-danger mb-4" type="button">Buy Now</button>
+
+                          </div>
+
+
+                </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- s------------------- -->
+
+        <div class="container-fluid mt-5 mb-5">
+            <div class="container">
+
+                <div class="row justify-content-center align-item-center">
+                    <div class="col-8">
+                        <h1 class="text-center fw-bold mb-4">Contact With Us</h1>
+                        <div class="row justify-content-between mt-5">
+                        <i class="fa-brands fa-facebook col-3 text-center  ba"></i>
+                        <i class="fa-brands fa-github col-3 text-center  ba"></i>
+                        <i class="fa-brands fa-twitter col-3 text-center  ba"></i>
+                        <i class="fa-solid fa-envelope col-3 text-center  ba"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container-fluid l1 mt-5 ">
+            <div class="container ">
+               <div class="row text-center justify-content-center align-item-center">
+                <div class="col-6   mt-5">
+                    <h1 class="text-center fw-bold">Start your free trial today</h1>
+                    <h4 class="text-center kl">Try or 100% raw digine and code</h4>
+                   <button class="btn btn-primary mt-4 ">Free Try For 30 Days</button>
+               </div>
+               </div>
+
+
+
+
+            </div>
+
+        </div>   
+        <div class="container">
+            <div class="row justify-content-between mt-5 mb-5">
+                <div class="col-2">
+                    <h4 class="fw-bold">Company</h4>
+                    <h5 class="kll">About</h5>
+                    <h5 class="kll">Careers</h5>
+                    <h5 class="kll">Brand Center</h5>
+                    <h5 class="kll">Blog</h5>
+                </div>
+                <div class="col-2">
+                    <h4 class="fw-bold">Company</h4>
+                    <h5 class="kll">About</h5>
+                    <h5 class="kll">Careers</h5>
+                    <h5 class="kll">Brand Center</h5>
+                    <h5 class="kll">Blog</h5>
+                </div>
+                <div class="col-2">
+                    <h4 class="fw-bold">Company</h4>
+                    <h5 class="kll">About</h5>
+                    <h5 class="kll">Careers</h5>
+                    <h5 class="kll">Brand Center</h5>
+                    <h5 class="kll">Blog</h5>
+                </div>
+                <div class="col-2">
+                    <h4 class="fw-bold">Company</h4>
+                    <h5 class="kll">About</h5>
+                    <h5 class="kll">Careers</h5>
+                    <h5 class="kll">Brand Center</h5>
+                    <h5 class="kll">Blog</h5>
+                </div>
+                <div class="col-2">
+                    <h4 class="fw-bold">Company</h4>
+                    <h5 class="kll">About</h5>
+                    <h5 class="kll">Careers</h5>
+                    <h5 class="kll">Brand Center</h5>
+                    <h5 class="kll">Blog</h5>
+                </div>
+            </div>
+            <div class="end"></div>
+            <div class="row justify-content-center align-item-center">
+                <div class="col-6 ">
+                    <h6 class="text-center kl">© 2021-2022 Landwind™. All Rights Reserved. Built with Flowbite and Tailwind CSS.</h6>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.from(".qi",{
+            y:-200,
+            duration:1,
+            delay:0,
+            opacity:0,
+            // stagger:0.4
+        })
+        gsap.from(".qii",{
+            x:-200,
+            duration:1,
+            delay:0,
+            opacity:0,
+            stagger:1
+        })
+        gsap.from(".qiii",{
+            x:200,
+            duration:1,
+            delay:0,
+            opacity:0,
+            stagger:1
+        })
+        gsap.from(".qiiii",{
+            x:-200,
+            duration:1,
+            delay:0,
+            opacity:0,
+            // stagger:1
+        })
+        gsap.from(".qo",{
+            y:400,
+            duration:1,
+            delay:0,
+            opacity:0,
+            stagger:1
+        })
+        gsap.from(".big",{
+            x:300,
+            duration:1,
+            delay:0,
+            opacity:0,
+            scrollTrigger:".big"
+        })
+        gsap.from(".big1",{
+            x:-300,
+            duration:1,
+            delay:0,
+            opacity:0,
+            scrollTrigger:".big1"
+        })
+
+    </script>
+
+
+
+</body>
+</html>
