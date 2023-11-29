@@ -1,0 +1,51 @@
+
+gsap.from(".qi",{
+    y:-200,
+    duration:1,
+    delay:0,
+    opacity:0,
+    // stagger:0.4
+})
+gsap.from(".qii",{
+    x:-200,
+    duration:1,
+    delay:0,
+    opacity:0,
+    stagger:1
+})
+gsap.from(".qiii",{
+    x:200,
+    duration:1,
+    delay:0,
+    opacity:0,
+    stagger:1
+})
+gsap.from(".qiiii",{
+    x:-200,
+    duration:1,
+    delay:0,
+    opacity:0,
+    // stagger:1
+})
+gsap.from(".qo",{
+    y:400,
+    duration:1,
+    delay:0,
+    opacity:0,
+    stagger:1
+})
+gsap.from(".big",{
+    x:300,
+    duration:1,
+    delay:0,
+    opacity:0,
+    scrollTrigger:".big"
+})
+gsap.from(".big1",{
+    x:-300,
+    duration:1,
+    delay:0,
+    opacity:0,
+    scrollTrigger:".big1"
+})
+
